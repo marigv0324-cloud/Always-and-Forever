@@ -1,100 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always and Forever ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fondo: #000000;
+            --rojo-brillante: #ff0000;
+            --tarjeta: #0a0a0a;
+            --texto-claro: #ffffff;
+        }
 
-<title>Nosotros 2.0 ❤️</title>
+        body {
+            background-color: var(--fondo);
+            color: var(--texto-claro);
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-<style>
+        /* Portada de bienvenida */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle, #2a0000 0%, #000000 100%);
+        }
 
-body{
-    background:#0f172a;
-    color:white;
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
-}
+        h1 { font-family: 'Dancing Script', cursive; font-size: 5rem; color: var(--rojo-brillante); margin: 0; text-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+        .intro-p { max-width: 650px; font-size: 1.3rem; margin-top: 25px; line-height: 1.8; color: #bbb; opacity: 0.9; }
+        
+        .scroll-down {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: var(--rojo-brillante);
+            animation: rebote 2s infinite;
+        }
 
-.card{
-    background:#1e293b;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    width:350px;
-    box-shadow:0px 0px 25px rgba(255,255,255,0.1);
-}
+        @keyframes rebote {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
 
-h1{
-    color:#ff4d6d;
-}
+        .container { max-width: 800px; margin: 0 auto; padding: 100px 20px; }
 
-button{
-    background:#ff4d6d;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-}
+        /* Estilo de los recuerdos Ocultos por defecto */
+        .recuerdo {
+            background: var(--tarjeta);
+            margin-bottom: 150px; /* Espacio extra para que la página sea larga */
+            padding: 25px 25px 50px 25px;
+            border-radius: 8px;
+            border: 1px solid #222;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+            
+            /* Efecto de invisibilidad inicial */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
 
-button:hover{
-    transform:scale(1.05);
-}
+        /* Clase que se activa al hacer scroll */
+        .recuerdo.visible {
+            opacity: 1;
+            transform: translateY(0);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+        }
 
-#mensaje{
-    margin-top:20px;
-    font-size:18px;
-}
+        .recuerdo img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 20px; }
+        .recuerdo h2 { font-family: 'Dancing Script', cursive; color: var(--rojo-brillante); font-size: 2.8rem; margin: 10px 0; }
+        .recuerdo p { font-size: 1.2rem; color: #ccc; line-height: 1.6; }
 
-</style>
+        .galeria-titulo { font-family: 'Dancing Script', cursive; font-size: 4rem; color: var(--rojo-brillante); text-align: center; margin-bottom: 50px; }
+
+        footer {
+            text-align: center;
+            padding: 150px 20px;
+            background: linear-gradient(to top, #200000, #000000);
+        }
+
+        .corazon { font-size: 4rem; color: var(--rojo-brillante); animation: latido 1.2s infinite; text-shadow: 0 0 20px red; }
+        @keyframes latido {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="card">
+<header>
+    <h1>Always and Forever ✨</h1>
+    <p class="intro-p">Un pequeño proyecto hecho con amor, recuerdos y esperanza. Tal vez nuestra historia tuvo algunos errores y fallos inesperados, pero todavía creo en nosotros y en todo lo que hemos podido construir juntos. ❤️</p>
+    <div class="scroll-down">Desliza hacia abajo para recordar... ▼</div>
+</header>
 
-<h1>Proyecto: Nosotros 2.0 ❤️</h1>
+<div class="container">
+    <div class="recuerdo">
+        <img src="salida1.jpg" alt="Recuerdo">
+        <h2>Nuestra primera salida 👣</h2>
+        <p>Todavía recuerdo los nervios y la emoción de ese día. Tal vez parecía una salida cualquiera, pero para mí era el inicio de todo.</p>
+    </div>
 
-<p>
-Sé que hubo errores en el sistema...
-pero todavía quiero construir contigo.
-</p>
+    <div class="recuerdo">
+        <img src="paseo.jpg" alt="Recuerdo">
+        <h2>Nuestro primer paseo 🌿</h2>
+        <p>No recuerdo solo el lugar, recuerdo cómo me sentía contigo ese día. La tranquilidad, las risas y esa sensación bonita de simplemente disfrutar estar juntos.</p>
+    </div>
 
-<button onclick="mostrarMensaje()">
-Iniciar programa
-</button>
+    <div class="recuerdo">
+        <img src="concierto.jpg" alt="Recuerdo">
+        <h2>Nuestro primer concierto 🎸</h2>
+        <p>Entre la música, el ruido y toda la emoción, lo que más recuerdo es haberte tenido a mi lado. Ese día se quedó guardado en mi corazón de una forma muy especial.</p>
+    </div>
 
-<div id="mensaje"></div>
+    <div class="recuerdo">
+        <img src="dormir.jpg" alt="Recuerdo">
+        <h2>Nuestro primer día durmiendo fuera 🌙</h2>
+        <p>Ese día se sintió como una pequeña aventura juntos. Entre conversaciones, risas y momentos tranquilos, entendí lo feliz que me hacía compartir contigo y la seguridad que me dabas con tu única presencia.</p>
+    </div>
 
+    <div class="recuerdo">
+        <img src="cancion.jpg" alt="Recuerdo">
+        <h2>La primera canción que me dedicaste 🎵</h2>
+        <p>Cada vez que la escucho recuerdo cómo me sentí ese día y la forma tan bonita en la que empezamos a conectar.</p>
+    </div>
+
+    <div class="recuerdo">
+        <img src="serie.jpg" alt="Recuerdo">
+        <h2>Nuestra primera serie juntos 📺</h2>
+        <p>Compartir una serie contigo terminó convirtiéndose en uno de los planes que me hacen más feliz.</p>
+    </div>
+
+    <div class="recuerdo">
+        <img src="saco.jpg" alt="Recuerdo">
+        <h2>El primer saco que me prestaste 🧥</h2>
+        <p>Dejó de ser un saco para convertirse en algo que me conectaba a ti cuando no estabas cerca.</p>
+    </div>
+
+    <div class="recuerdo">
+        <img src="compras.jpg" alt="Recuerdo">
+        <h2>Nuestro primer día de compras 🛍️</h2>
+        <p>Aún recuerdo ese día y la pena que me daba aceptar cualquier cosa de ti. No podía creer que alguien quisiera invertir tanto en mí, consentirme y verme con tanto cariño.</p>
+    </div>
+
+    <div class="recuerdo">
+        <img src="favorita.jpg" alt="Recuerdo">
+        <h2>Nuestra comida favorita 🍕</h2>
+        <p>La comida siempre supo mejor cuando la compartía contigo. Entre conversaciones, risas y pequeños momentos, esa comida terminó convirtiéndose en algo muy nuestro.</p>
+    </div>
+
+    <div class="recuerdo">
+        <img src="hogar.jpg" alt="Recuerdo">
+        <h2>Cuando empezamos a construir nuestro hogar 🏠</h2>
+        <p>No fue solo comprar cosas o imaginar espacios. Fue empezar a soñar juntos, pensar en un lugar nuestro y construir poco a poco algo lleno de ilusión, amor y momentos que queríamos compartir.</p>
+    </div>
+
+    <div class="recuerdo">
+        <img src="pelicula.jpg" alt="Recuerdo">
+        <h2>La mejor película de amor 🎬</h2>
+        <p>Siempre amaré que lo hicieras por mí.</p>
+    </div>
 </div>
 
+<footer>
+    <div class="corazon">❤️</div>
+    <p style="font-size: 1.4rem; max-width: 600px; margin: 30px auto; color: #ddd;">No importa los problemas u obstáculos, nos amamos y tenemos una hermosa historia que merece seguir siendo escrita.</p>
+    <p style="font-weight: bold; font-size: 2rem; color: #ff0000; text-shadow: 0 0 10px red;">Te amo siempre. 🌹</p>
+</footer>
+
 <script>
+    // Script para detectar el scroll y mostrar los recuerdos
+    const recuerdos = document.querySelectorAll('.recuerdo');
 
-function mostrarMensaje(){
+    const mostrarRecuerdos = () => {
+        const triggerBottom = window.innerHeight * 0.8;
 
-document.getElementById("mensaje").innerHTML = `
-<p>
-while(alive){<br>
-&nbsp;&nbsp;loveYou();<br>
-}
-</p>
+        recuerdos.forEach(recuerdo => {
+            const recuerdoTop = recuerdo.getBoundingClientRect().top;
 
-<p>
-Gracias por seguir aquí conmigo ❤️
-</p>
-`;
+            if(recuerdoTop < triggerBottom) {
+                recuerdo.classList.add('visible');
+            }
+        });
+    };
 
-}
-
+    window.addEventListener('scroll', mostrarRecuerdos);
+    // Ejecutar una vez al cargar por si ya hay elementos visibles
+    mostrarRecuerdos();
 </script>
-
-<!-- Gracias por existir -->
-<!-- Eres mi persona favorita -->
 
 </body>
 </html>
