@@ -35,91 +35,50 @@
 
         h1 { font-family: 'Dancing Script', cursive; font-size: 5rem; color: var(--rojo-brillante); margin: 0; text-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
         .intro-p { max-width: 650px; font-size: 1.3rem; margin-top: 25px; line-height: 1.8; color: #bbb; opacity: 0.9; }
-        
-        .scroll-down {
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: var(--rojo-brillante);
-            animation: rebote 2s infinite;
-        }
 
-        @keyframes rebote {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
-        }
+        .container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 100px 20px; }
-
+        /* Estilo de tarjetas (Como estaba antes) */
         .recuerdo {
             background: var(--tarjeta);
-            margin-bottom: 150px;
-            padding: 25px 25px 50px 25px;
-            border-radius: 8px;
+            margin-bottom: 80px;
+            padding: 25px;
+            border-radius: 12px;
             border: 1px solid #222;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease-out;
-        }
-
-        .recuerdo.visible {
-            opacity: 1;
-            transform: translateY(0);
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
-        }
-
-        .recuerdo img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 20px; }
-        .recuerdo h2 { font-family: 'Dancing Script', cursive; color: var(--rojo-brillante); font-size: 2.8rem; margin: 10px 0; }
-        .recuerdo p { font-size: 1.2rem; color: #ccc; line-height: 1.6; }
-
-        .galeria-titulo { font-family: 'Dancing Script', cursive; font-size: 4rem; color: var(--rojo-brillante); text-align: center; margin-top: 100px; margin-bottom: 50px; }
-        
-        .grid-fotos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .foto-mini {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            height: 350px;
-            border: 1px solid #222;
-        }
-
-        .foto-mini img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-        
-        .overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(139, 0, 0, 0.85);
-            color: white;
-            opacity: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            padding: 20px;
-            transition: 0.4s;
-            font-size: 1.4rem;
-            font-weight: 500;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
         }
-
-        .foto-mini:hover .overlay { opacity: 1; }
+        .recuerdo img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+        .recuerdo h2 { font-family: 'Dancing Script', cursive; color: var(--rojo-brillante); font-size: 2.5rem; margin: 10px 0; }
+        .recuerdo p { font-size: 1.2rem; color: #ccc; line-height: 1.6; }
 
         footer {
             text-align: center;
-            padding: 150px 20px;
+            padding: 100px 20px;
             background: linear-gradient(to top, #200000, #000000);
         }
 
         .corazon { font-size: 4rem; color: var(--rojo-brillante); animation: latido 1.2s infinite; text-shadow: 0 0 20px red; }
         @keyframes latido {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.15); }
             100% { transform: scale(1); }
+        }
+
+        .mensaje-final {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 30px auto;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .te-amo {
+            font-weight: bold;
+            font-size: 2.2rem;
+            color: #ff0000;
+            text-shadow: 0 0 10px red;
+            font-family: 'Dancing Script', cursive;
         }
     </style>
 </head>
@@ -127,62 +86,38 @@
 
 <header>
     <h1>Always and Forever ✨</h1>
-    <p class="intro-p">Un pequeño proyecto hecho con amor, recuerdos y esperanza. Tal vez nuestra historia tuvo algunos errores y fallos inesperados, pero todavía creo en nosotros y en todo lo que hemos podido construir juntos. ❤️</p>
-    <div class="scroll-down">Desliza hacia abajo para recordar... ▼</div>
+    <p class="intro-p">Un pequeño proyecto hecho con amor, recuerdos y esperanza. ❤️</p>
 </header>
 
 <div class="container">
     <div class="recuerdo"><img src="salida1.jpg"><h2>Nuestra primera salida 👣</h2><p>Todavía recuerdo los nervios y la emoción de ese día. Tal vez parecía una salida cualquiera, pero para mí era el inicio de todo.</p></div>
-    <div class="recuerdo"><img src="paseo.jpg"><h2>Nuestro primer paseo 🌿</h2><p>No recuerdo solo el lugar, recuerdo cómo me sentía contigo ese día. La tranquilidad, las risas y esa sensación bonita de simplemente disfrutar estar juntos.</p></div>
-    <div class="recuerdo"><img src="concierto.jpg"><h2>Nuestro primer concierto 🎸</h2><p>Entre la música, el ruido y toda la emoción, lo que más recuerdo es haberte tenido a mi lado. Ese día se quedó guardado en mi corazón de una forma muy especial.</p></div>
-    <div class="recuerdo"><img src="dormir.jpg"><h2>Nuestro primer día durmiendo fuera 🌙</h2><p>Ese día se sintió como una pequeña aventura juntos. Entre conversaciones, risas y momentos tranquilos, entendí lo feliz que me hacía compartir contigo y la seguridad que me dabas con tu única presencia.</p></div>
-    <div class="recuerdo"><img src="cancion.jpg"><h2>La primera canción que me dedicaste 🎵</h2><p>Cada vez que la escucho recuerdo cómo me sentí ese día y la forma tan bonita en la que empezamos a conectar.</p></div>
-    <div class="recuerdo"><img src="serie.jpg"><h2>Nuestra primera serie juntos 📺</h2><p>Compartir una serie contigo terminó convirtiéndose en uno de los planes que me hacen más feliz.</p></div>
-    <div class="recuerdo"><img src="saco.jpg"><h2>El primer saco que me prestaste 🧥</h2><p>Dejó de ser un saco para convertirse en algo que me conectaba a ti cuando no estabas cerca.</p></div>
-    <div class="recuerdo"><img src="compras.jpg"><h2>Nuestro primer día de compras 🛍️</h2><p>Aún recuerdo ese día y la pena que me daba aceptar cualquier cosa de ti. No podía creer que alguien quisiera invertir tanto en mí, consentirme y verme con tanto cariño.</p></div>
-    <div class="recuerdo"><img src="favorita.jpg"><h2>Nuestra comida favorita 🍕</h2><p>La comida siempre supo mejor cuando la compartía contigo. Entre conversaciones, risas y pequeños momentos, esa comida terminó convirtiéndose en algo muy nuestro.</p></div>
-    <div class="recuerdo"><img src="hogar.jpg"><h2>Cuando empezamos a construir nuestro hogar 🏠</h2><p>No fue solo comprar cosas o imaginar espacios. Fue empezar a soñar juntos, pensar en un lugar nuestro y construir poco a poco algo lleno de ilusión, amor y momentos que queríamos compartir.</p></div>
+    <div class="recuerdo"><img src="paseo.jpg"><h2>Nuestro primer paseo 🌿</h2><p>No recuerdo solo el lugar, recuerdo cómo me sentía contigo ese día. La tranquilidad y las risas.</p></div>
+    <div class="recuerdo"><img src="concierto.jpg"><h2>Nuestro primer concierto 🎸</h2><p>Entre la música y el ruido, lo que más recuerdo es haberte tenido a mi lado.</p></div>
+    <div class="recuerdo"><img src="dormir.jpg"><h2>Nuestro primer día durmiendo fuera 🌙</h2><p>Entendí lo feliz que me hacía compartir contigo y la seguridad que me dabas.</p></div>
+    <div class="recuerdo"><img src="compras.jpg"><h2>Nuestro primer día de compras 🛍️</h2><p>Aún recuerdo ese día y la pena que me daba aceptar cualquier cosa de ti. No podía creer que alguien quisiera consentirme tanto.</p></div>
+    <div class="recuerdo"><img src="hogar.jpg"><h2>Construyendo nuestro hogar 🏠</h2><p>Fue empezar a soñar juntos y pensar en un lugar nuestro lleno de ilusión.</p></div>
     <div class="recuerdo"><img src="pelicula.jpg"><h2>La mejor película de amor 🎬</h2><p>Siempre amaré que lo hicieras por mí.</p></div>
 
-    <div class="galeria-seccion">
-        <h2 class="galeria-titulo">Momentos que no olvido 📸</h2>
-        <div class="grid-fotos">
-            <div class="foto-mini"><img src="extra1.jpg"><div class="overlay">Nuestra cafetería favorita ☕</div></div>
-            <div class="foto-mini"><img src="extra2.jpg"><div class="overlay">Nuestro día de cócteles 🍹</div></div>
-            <div class="foto-mini"><img src="extra3.jpg"><div class="overlay">Nosotros viajando ✈️</div></div>
-            <div class="foto-mini"><img src="extra4.jpg"><div class="overlay">En otro país 🌍</div></div>
-            <div class="foto-mini"><img src="extra5.jpg"><div class="overlay">Tú siendo feliz ✨</div></div>
-            <div class="foto-mini"><img src="extra6.jpg"><div class="overlay">Tú comiendo porque amas comer dulce 🍭</div></div>
-            <div class="foto-mini"><img src="extra7.jpg"><div class="overlay">Tú siendo un niño feliz 🎈</div></div>
-            <div class="foto-mini"><img src="extra8.jpg"><div class="overlay">Decepcionado pero hinchas reales ⚽</div></div>
-            <div class="foto-mini"><img src="extra9.jpg"><div class="overlay">El mejor día por siempre 💍</div></div>
-            <div class="foto-mini"><img src="extra10.jpg"><div class="overlay">Tú siendo el mecánico más lindo 🔧</div></div>
-            <div class="foto-mini"><img src="extra11.jpg"><div class="overlay">Tú eres el mejor cocinero porque quedaron deliciosos 👨‍🍳</div></div>
-            <div class="foto-mini"><img src="extra12.jpg"><div class="overlay">Nuestra primera borrachera y me odiabas ese día 🥂</div></div>
-            <div class="foto-mini"><img src="extra13.jpg"><div class="overlay">Nuestra foto más tierna 🧸</div></div>
-        </div>
-    </div>
+    <div class="recuerdo"><img src="extra1.jpg"><h2>Nuestra cafetería favorita ☕</h2></div>
+    <div class="recuerdo"><img src="extra2.jpg"><h2>Nuestro día de cócteles 🍹</h2></div>
+    <div class="recuerdo"><img src="extra3.jpg"><h2>Nosotros viajando ✈️</h2></div>
+    <div class="recuerdo"><img src="extra4.jpg"><h2>En otro país 🌍</h2></div>
+    <div class="recuerdo"><img src="extra5.jpg"><h2>Tú siendo feliz ✨</h2></div>
+    <div class="recuerdo"><img src="extra6.jpg"><h2>Amante del dulce 🍭</h2><p>Comiendo porque amas comer dulce.</p></div>
+    <div class="recuerdo"><img src="extra7.jpg"><h2>Tu siendo un niño feliz 🎈</h2></div>
+    <div class="recuerdo"><img src="extra8.jpg"><h2>Decepcionado pero hinchas reales ⚽</h2></div>
+    <div class="recuerdo"><img src="extra9.jpg"><h2>El mejor día por siempre 💍</h2></div>
+    <div class="recuerdo"><img src="extra10.jpg"><h2>El mecánico más lindo 🔧</h2></div>
+    <div class="recuerdo"><img src="extra11.jpg"><h2>El mejor cocinero 👨‍🍳</h2><p>Quedaron deliciosos.</p></div>
+    <div class="recuerdo"><img src="extra12.jpg"><h2>Nuestra primera borrachera 🥂</h2><p>Me odiabas ese día.</p></div>
+    <div class="recuerdo"><img src="extra13.jpg"><h2>Nuestra foto más tierna 🧸</h2></div>
 </div>
 
 <footer>
     <div class="corazon">❤️</div>
-    <p style="font-size: 1.4rem; max-width: 600px; margin: 30px auto; color: #ddd;">No importa los problemas u obstáculos, nos amamos y tenemos una hermosa historia que merece seguir siendo escrita.</p>
-    <p style="font-weight: bold; font-size: 2rem; color: #ff0000; text-shadow: 0 0 10px red;">Te amo siempre. 🌹</p>
+    <p class="mensaje-final">No importa los problemas u obstáculos, nos amamos y tenemos una hermosa historia que merece seguir siendo escrita.</p>
+    <p class="te-amo">Te amo siempre. 🌹</p>
 </footer>
 
-<script>
-    const recuerdos = document.querySelectorAll('.recuerdo');
-    const mostrarRecuerdos = () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        recuerdos.forEach(recuerdo => {
-            const recuerdoTop = recuerdo.getBoundingClientRect().top;
-            if(recuerdoTop < triggerBottom) {
-                recuerdo.classList.add('visible');
-            }
-        });
-    };
-    window.addEventListener('scroll', mostrarRecuerdos);
-    mostrarRecuerdos();
-</script>
 </body>
 </html>
