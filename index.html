@@ -36,21 +36,52 @@
         h1 { font-family: 'Dancing Script', cursive; font-size: 5rem; color: var(--rojo-brillante); margin: 0; text-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
         .intro-p { max-width: 650px; font-size: 1.3rem; margin-top: 25px; line-height: 1.8; color: #bbb; opacity: 0.9; }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
 
-        /* Estilo de tarjetas (Como estaba antes) */
-        .recuerdo {
-            background: var(--tarjeta);
-            margin-bottom: 80px;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #222;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+        /* --- ESTILO POLAROID SOBRE FONDO NEGRO --- */
+        .grid-fotos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            justify-items: center;
         }
-        .recuerdo img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
-        .recuerdo h2 { font-family: 'Dancing Script', cursive; color: var(--rojo-brillante); font-size: 2.5rem; margin: 10px 0; }
-        .recuerdo p { font-size: 1.2rem; color: #ccc; line-height: 1.6; }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px; /* Espacio abajo para el título */
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+            transition: transform 0.4s;
+            width: 280px;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        .pie-polaroid {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .pie-polaroid h3 {
+            font-family: 'Dancing Script', cursive;
+            color: #b71c1c; /* Un rojo oscuro que resalta en el blanco */
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        .pie-polaroid p {
+            color: #555;
+            font-size: 0.9rem;
+            margin: 5px 0 0 0;
+        }
 
         footer {
             text-align: center;
@@ -60,9 +91,8 @@
 
         .corazon { font-size: 4rem; color: var(--rojo-brillante); animation: latido 1.2s infinite; text-shadow: 0 0 20px red; }
         @keyframes latido {
-            0% { transform: scale(1); }
+            0%, 100% { transform: scale(1); }
             50% { transform: scale(1.15); }
-            100% { transform: scale(1); }
         }
 
         .mensaje-final {
@@ -90,27 +120,23 @@
 </header>
 
 <div class="container">
-    <div class="recuerdo"><img src="salida1.jpg"><h2>Nuestra primera salida 👣</h2><p>Todavía recuerdo los nervios y la emoción de ese día. Tal vez parecía una salida cualquiera, pero para mí era el inicio de todo.</p></div>
-    <div class="recuerdo"><img src="paseo.jpg"><h2>Nuestro primer paseo 🌿</h2><p>No recuerdo solo el lugar, recuerdo cómo me sentía contigo ese día. La tranquilidad y las risas.</p></div>
-    <div class="recuerdo"><img src="concierto.jpg"><h2>Nuestro primer concierto 🎸</h2><p>Entre la música y el ruido, lo que más recuerdo es haberte tenido a mi lado.</p></div>
-    <div class="recuerdo"><img src="dormir.jpg"><h2>Nuestro primer día durmiendo fuera 🌙</h2><p>Entendí lo feliz que me hacía compartir contigo y la seguridad que me dabas.</p></div>
-    <div class="recuerdo"><img src="compras.jpg"><h2>Nuestro primer día de compras 🛍️</h2><p>Aún recuerdo ese día y la pena que me daba aceptar cualquier cosa de ti. No podía creer que alguien quisiera consentirme tanto.</p></div>
-    <div class="recuerdo"><img src="hogar.jpg"><h2>Construyendo nuestro hogar 🏠</h2><p>Fue empezar a soñar juntos y pensar en un lugar nuestro lleno de ilusión.</p></div>
-    <div class="recuerdo"><img src="pelicula.jpg"><h2>La mejor película de amor 🎬</h2><p>Siempre amaré que lo hicieras por mí.</p></div>
-
-    <div class="recuerdo"><img src="extra1.jpg"><h2>Nuestra cafetería favorita ☕</h2></div>
-    <div class="recuerdo"><img src="extra2.jpg"><h2>Nuestro día de cócteles 🍹</h2></div>
-    <div class="recuerdo"><img src="extra3.jpg"><h2>Nosotros viajando ✈️</h2></div>
-    <div class="recuerdo"><img src="extra4.jpg"><h2>En otro país 🌍</h2></div>
-    <div class="recuerdo"><img src="extra5.jpg"><h2>Tú siendo feliz ✨</h2></div>
-    <div class="recuerdo"><img src="extra6.jpg"><h2>Amante del dulce 🍭</h2><p>Comiendo porque amas comer dulce.</p></div>
-    <div class="recuerdo"><img src="extra7.jpg"><h2>Tu siendo un niño feliz 🎈</h2></div>
-    <div class="recuerdo"><img src="extra8.jpg"><h2>Decepcionado pero hinchas reales ⚽</h2></div>
-    <div class="recuerdo"><img src="extra9.jpg"><h2>El mejor día por siempre 💍</h2></div>
-    <div class="recuerdo"><img src="extra10.jpg"><h2>El mecánico más lindo 🔧</h2></div>
-    <div class="recuerdo"><img src="extra11.jpg"><h2>El mejor cocinero 👨‍🍳</h2><p>Quedaron deliciosos.</p></div>
-    <div class="recuerdo"><img src="extra12.jpg"><h2>Nuestra primera borrachera 🥂</h2><p>Me odiabas ese día.</p></div>
-    <div class="recuerdo"><img src="extra13.jpg"><h2>Nuestra foto más tierna 🧸</h2></div>
+    <h2 style="font-family: 'Dancing Script', cursive; font-size: 3.5rem; color: var(--rojo-brillante); text-align: center; margin-bottom: 50px;">Momentos que no olvido 📸</h2>
+    
+    <div class="grid-fotos">
+        <div class="polaroid"><img src="extra1.jpg"><div class="pie-polaroid"><h3>Nuestra cafetería favorita ☕</h3></div></div>
+        <div class="polaroid"><img src="extra2.jpg"><div class="pie-polaroid"><h3>Nuestro día de cócteles 🍹</h3></div></div>
+        <div class="polaroid"><img src="extra3.jpg"><div class="pie-polaroid"><h3>Nosotros viajando ✈️</h3></div></div>
+        <div class="polaroid"><img src="extra4.jpg"><div class="pie-polaroid"><h3>En otro país 🌍</h3></div></div>
+        <div class="polaroid"><img src="extra5.jpg"><div class="pie-polaroid"><h3>Tú siendo feliz ✨</h3></div></div>
+        <div class="polaroid"><img src="extra6.jpg"><div class="pie-polaroid"><h3>Amante del dulce 🍭</h3><p>Comiendo porque amas comer dulce</p></div></div>
+        <div class="polaroid"><img src="extra7.jpg"><div class="pie-polaroid"><h3>Un niño feliz 🎈</h3></div></div>
+        <div class="polaroid"><img src="extra8.jpg"><div class="pie-polaroid"><h3>Hinchas reales ⚽</h3><p>Decepcionado pero hinchas reales</p></div></div>
+        <div class="polaroid"><img src="extra9.jpg"><div class="pie-polaroid"><h3>El mejor día por siempre 💍</h3></div></div>
+        <div class="polaroid"><img src="extra10.jpg"><div class="pie-polaroid"><h3>El mecánico más lindo 🔧</h3></div></div>
+        <div class="polaroid"><img src="extra11.jpg"><div class="pie-polaroid"><h3>El mejor cocinero 👨‍🍳</h3><p>Quedaron deliciosos</p></div></div>
+        <div class="polaroid"><img src="extra12.jpg"><div class="pie-polaroid"><h3>Nuestra primera borrachera 🥂</h3><p>Me odiabas ese día</p></div></div>
+        <div class="polaroid"><img src="extra13.jpg"><div class="pie-polaroid"><h3>Nuestra foto más tierna 🧸</h3></div></div>
+    </div>
 </div>
 
 <footer>
